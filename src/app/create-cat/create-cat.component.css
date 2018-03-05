@@ -1,0 +1,17 @@
+.btn-img:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: baseline;
+    background-color: transparent;
+    background-position : center center;
+    background-repeat:no-repeat;
+}
+.btn-save:before {
+    background-image: url(../../assets/images/checkmark.png);
+}
+.btn-cancel:before{
+    background-image: url(../../assets/images/cancel-circle.png);
+}

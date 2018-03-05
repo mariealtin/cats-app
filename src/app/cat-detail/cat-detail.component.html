@@ -1,0 +1,23 @@
+<div *ngIf="cat">
+  <h2>Edit: {{cat.name}}</h2>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input id="name" required [(ngModel)]="cat.name" class="form-control" placeholder="Name" #name="ngModel"/>
+    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+      <div *ngIf="name.errors.required">
+        Name is required.
+      </div>
+    </div>
+  </div>
+    <div class="form-group">
+      <label for="color">Color:</label>
+      <input id="color" required [(ngModel)]="cat.color" required  class="form-control" placeholder="Color" #color="ngModel">
+      <div *ngIf="color.invalid && (color.dirty || color.touched)" class="alert alert-danger">
+        <div *ngIf="color.errors.required">
+          Color is required.
+        </div>
+      </div>
+  </div>
+    <button type="submit" class="btn btn-primary btn-img btn-save" (click)="save()">Save</button>
+    <button type="submit" class="btn btn-default btn-img btn-cancel" (click)="goBack()">Cancel</button>
+</div>

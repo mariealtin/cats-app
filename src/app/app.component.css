@@ -1,0 +1,15 @@
+html, body {
+    margin: 5px;
+    font-size: 2em;
+    font-family: "Segoe UI", Arial, Tahoma, Verdana, sans-serif;
+    color: #333;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #999;
+  }
+.header {
+    height: 120px;
+    padding: 20px;
+}

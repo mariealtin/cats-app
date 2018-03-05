@@ -1,0 +1,29 @@
+<div style="margin-bottom:10px">
+  <a routerLink="/create">
+    <button type="submit" class="btn btn-md btn-primary btn-img btn-new">
+      New
+    </button>
+  </a>
+</div>
+<ul class="list-group">
+  <li *ngFor="let cat of cats" class="list-group-item">
+    <div class="row">
+        <div class="col-lg-2">
+          <span class="lead">{{cat.name}}</span> <br />
+          {{cat.color}}
+        </div>
+        <div class="col-lg-2">
+          <a routerLink="/cat/{{cat.id}}">
+            <button type="submit" class="btn btn-md btn-default btn-img btn-edit">
+                Edit
+            </button>
+          </a>
+        </div>
+        <div class="col-lg-2">
+          <button type="submit" class="btn btn-md btn-default btn-img btn-delete" (click)="delete(cat)">
+              Delete
+          </button>
+        </div>
+    </div>
+  </li>
+</ul>
